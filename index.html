@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arithmeticker</title>
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8">
+	<script type="text/javascript" charset="utf-8" src="lib/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="scripts.js"></script>
+	<link rel="shortcut icon" href="favicon.png" />
+</head>
+<body>
+	<div class="container">
+
+		<hr>
+
+		<header>
+			<h1>Arithmeticker <small>math with dates and times</small></h1>
+		</header>
+
+		<hr>
+		
+		<section id="application">
+			<div class="row">
+				<div class="span6">
+<textarea id="input" name="input" wrap="off">
+5/7/1982
+19/4/1984
+19/4/1984 - 5/7/1982
+12 weeks - 43 days
+1 week + 5 days in days
+1 week + 5 days in hours
+today
+now
+now + 5hrs
+today + 1 week - 2 days
+11 days + 5 days - 2 days - 1 day + 3 days
+8am + 456 minutes
+</textarea>
+				</div>
+				<div class="span6">
+					<ol id="results"></ol>
+				</div>
+			</div>
+		</section>
+		
+		<section id="options">
+			<div class="pull-right" id="timezone"></div>
+			<label class="radio"><input type="radio" name="month-order" value="ddmmyyyy" /> D/M/Y (normal)</label>
+			<label class="radio"><input type="radio" name="month-order" value="mmddyyyy" checked /> M/D/Y (crazy)</label>
+		</section>
+
+		<hr>
+		
+		<section id="documentation">
+			<h2>Documentation</h2>
+			<div class="row">
+				<div class="span4">
+					<p>Equations are entered in the textarea on the left.</p>
+					<p>Results for each line are displayed to the right.</p>	
+				</div>
+				<div class="span4">
+					<h3>Operators</h3>	
+					<table class="table">
+						<tr>
+							<td>Addition</td>
+							<td><code>+</code> / <code>plus</code></td>
+						</tr>
+						<tr>
+							<td>Subtraction</td>
+							<td><code>-</code> / <code>minus</code></td>
+						</tr>
+						<tr>
+							<td>Format</td>
+							<td><code>in</code> / <code>as</code> followed by unit of time</td>
+						</tr>
+					</table>
+					<h3>Placeholders</h3>	
+					<table class="table">
+						<tr>
+							<td>Now</td>
+							<td><code>now</code></td>
+						</tr>
+						<tr>
+							<td>Today</td>
+							<td><code>today</code></td>
+						</tr>
+						<tr>
+							<td>Yesterday</td>
+							<td><code>yesterday</code> aka <code>today - 1 day</code></td>
+						</tr>
+						<tr>
+							<td>Tomorrow</td>
+							<td><code>tomorrow</code> aka <code>today + 1 day</code></td>
+						</tr>
+					</table>
+				</div>
+				<div class="span4">
+					<h3>Units of time</h3>	
+					<table class="table">
+						<tr>
+							<td>Second</td>
+							<td><code>seconds</code> / <code>second</code> / <code>sec</code></td>
+						</tr>
+						<tr>
+							<td>Minute</td>
+							<td><code>minutes</code> / <code>minute</code> / <code>min</code></td>
+						</tr>
+						<tr>
+							<td>Hour</td>
+							<td><code>hours</code> / <code>hour</code> / <code>hrs</code> / <code>hr</code></td>
+						</tr>
+						<tr>
+							<td>Day</td>
+							<td><code>days</code> / <code>day</code></td>
+						</tr>
+						<tr>
+							<td>Week</td>
+							<td><code>weeks</code> / <code>week</code> / <code>wks</code> / <code>wk</code></td>
+						</tr>
+						<tr>
+							<td>Fortnight</td>
+							<td><code>seconds</code> / <code>second</code> / <code>sec</code></td>
+						</tr>
+					</table>
+					<h3>Locations in time</h3>
+					<ul>
+						<li><code>DD/MM/YYYY</code></li>
+						<li><code>HH:MM DD/MM/YYYY</code></li>
+						<li><code>HH:MM:SS</code></li>
+					</ul>
+					
+				</div>
+			</div>
+		</section>
+		
+		<hr>
+		
+		<footer>
+			<p class="pull-right">Made by <a href="http://www.blakebutcher.com">Blake Butcher</a></p>
+			<p>Inspired by Soulver. Uses jQuery and Bootstrap</p>
+		</footer>
+		
+	</div>
+</body>
+</html>
